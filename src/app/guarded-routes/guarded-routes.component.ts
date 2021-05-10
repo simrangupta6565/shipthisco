@@ -17,15 +17,13 @@ export class GuardedRoutesComponent implements OnInit {
   }
 
   ngOnInit() {
-
   }
-  Onclick() {
 
+  onClick() {
     this.router.navigate(['/auth/guarded-routes/example']);
-    // this.router.navigate(['/auth/guarded-routes/', { outlets: { popup: [ 'example' ] }}]); 
   }
-  Onclicked() {
 
+  onClicked() {
     this.router.navigate(['/auth/guarded-routes/ex']);
 
     this.snackBar.open(this.message, this.action, {

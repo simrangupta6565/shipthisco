@@ -23,9 +23,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     GuardedRouter,
     MatToolbarModule
    ],
-   providers: [
-   
-  ],
+   providers: [],
   declarations: [GuardedRoutesComponent, RouterComponent, RouterDeactivateComponent]
 })
 export class GuardedRoutesModule { }

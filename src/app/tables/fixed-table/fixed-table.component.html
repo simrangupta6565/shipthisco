@@ -6,7 +6,7 @@
 			<h1 class="mat-headline center-align" >Fixed Table</h1>
 		</mat-toolbar>
 		<div class="table-container">
-			<mat-table #table [dataSource]="dataSource">
+			<mat-table #table [dataSource]="dataSourceOf">
 
 				<!--- Note that these columns can be defined in any order.
 				The actual rendered columns are set as a property on the row definition" -->
@@ -37,7 +37,7 @@
 
 				<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
 				<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-				
+
 			</mat-table>
 		</div>
 	</div>

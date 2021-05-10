@@ -1,4 +1,5 @@
 
+import { DataSource } from '@angular/cdk/collections';
 import {fromEvent as observableFromEvent,  Observable } from 'rxjs';
 
 import {distinctUntilChanged, debounceTime} from 'rxjs/operators';
@@ -12,22 +13,25 @@ import { ExampleDatabase, ExampleDataSource } from './helpers.data';
 })
 export class FilterTableComponent implements OnInit {
 
-	public displayedColumns = ['userId', 'userName', 'progress', 'color'];
-	public exampleDatabase = new ExampleDatabase();
-	public dataSource: ExampleDataSource | null;
-  	public showFilterTableCode;
-  	@ViewChild('filter', { static: true }) filter: ElementRef;
-  	constructor() { }
+  public displayedColumns = ['userId', 'userName', 'progress', 'color'];
+  public exampleDatabase = new ExampleDatabase();
+  public dataSource: ExampleDataSource | null;
+  public showFilterTableCode;
+  @ViewChild('filter', { static: true }) filter: ElementRef;
 
-  	ngOnInit() {
-  		this.dataSource = new ExampleDataSource(this.exampleDatabase);
-        observableFromEvent(this.filter.nativeElement, 'keyup').pipe(
-            debounceTime(150),
-            distinctUntilChanged(),)
-            .subscribe(() => {
-              if (!this.dataSource) { return; }
-              this.dataSource.filter = this.filter.nativeElement.value;
-            });
+  constructor() { }
+
+    ngOnInit() {
+      // this.dataSource = new DataSource(this.exampleDatabase);
+      this.dataSource = new ExampleDataSource(this.exampleDatabase);
+
+      observableFromEvent(this.filter.nativeElement, 'keyup').pipe(
+        debounceTime(150),
+        distinctUntilChanged())
+        .subscribe(() => {
+          if (!this.dataSource) { return; }
+          this.dataSource.filter = this.filter.nativeElement.value;
+        });
     }
 
 }

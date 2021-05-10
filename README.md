@@ -1,18 +1,11 @@
-# CdK Admin - FREE PREMIUM ANGULAR 6 MATERIAL DESIGN+FLEX LAYOUT ADMIN PANEL
+# Todo
 
-Upgrade to latest angular - ongoing
-DEMO: https://cdk-admin.web.app
-
-
-for bugs use github issue tracker 
-
-## Changelog
-- Integrated sort on Responsive Tables
-- Small Flex alignments
-- Replaced ngx-perfect-scrollbar with ngx-scrollbar
-- Replaced ng9-odometer with ng9-odometer
-
-## Todo
-- Chat
-- Mail
-- Editor
+0. Should run the latest angular version
+1. Change app name
+2. Guarded routes > Left button (Router should activate)
+3. Tables > Fixed table should display
+4. Tables > Feature table should filter and sort
+5. Pages > Contact; Should be able to add new contact
+6. Should be able to clear notifications
+7. Should generate notification when task is assigned to developers and testers in scrumboard
+8. Material widgets should work

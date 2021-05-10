@@ -69,32 +69,32 @@ export const highlightJsValue = {
 @NgModule({
   imports: [
     CommonModule,
-    FlexLayoutModule,
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatProgressSpinnerModule,
-    MatIconModule,
-    MatTabsModule,
-    MatRadioModule,
-    MatToolbarModule,
-    MatListModule,
-    MatStepperModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatMenuModule,
-    MatExpansionModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatSliderModule,
-    MatSelectModule,
-    MatSlideToggleModule,
-    MatProgressBarModule,
-    HighlightModule,
-    MaterialWidgetsRouterModule
+    // FlexLayoutModule,
+    // MatAutocompleteModule,
+    // MatButtonModule,
+    // MatCardModule,
+    // MatCheckboxModule,
+    // MatProgressSpinnerModule,
+    // MatIconModule,
+    // MatTabsModule,
+    // MatRadioModule,
+    // MatToolbarModule,
+    // MatListModule,
+    // MatStepperModule,
+    // ReactiveFormsModule,
+    // FormsModule,
+    // MatFormFieldModule,
+    // MatInputModule,
+    // MatMenuModule,
+    // MatExpansionModule,
+    // MatDatepickerModule,
+    // MatNativeDateModule,
+    // MatSliderModule,
+    // MatSelectModule,
+    // MatSlideToggleModule,
+    // MatProgressBarModule,
+    // HighlightModule,
+    // MaterialWidgetsRouterModule
   ],
   declarations: [
     ButtonsComponent,
@@ -118,7 +118,7 @@ export const highlightJsValue = {
     InputComponent,
     RadioComponent,
     SelectComponent,
-    
+
 
 
     ],
@@ -137,6 +137,6 @@ export const highlightJsValue = {
   ],
   exports: [
     ]
-      
+
 })
 export class MaterialWidgetsModule { }

@@ -77,8 +77,8 @@ export class ExampleDataSource extends DataSource<any> {
 
     return observableMerge(...displayDataChanges).pipe(map(() => {
       return this._exampleDatabase.data.slice().filter((item: UserData) => {
-        let searchStr = (item.name + item.color).toLowerCase();
-        return searchStr.indexOf(this.filter.toLowerCase()) != -1;
+        const searchStr = (item.name + item.color).toLowerCase();
+        return searchStr.indexOf(this.filter.toLowerCase()) !== -1;
       });
     }));
   }

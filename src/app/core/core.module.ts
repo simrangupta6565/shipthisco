@@ -12,7 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RouterModule } from '@angular/router';
 // import {
-//     PerfectScrollbarModule, 
+//     PerfectScrollbarModule,
 //     PERFECT_SCROLLBAR_CONFIG,
 //     PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { NgScrollbarModule } from 'ngx-scrollbar';
