@@ -5,14 +5,24 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
+
 export class ContactComponent implements OnInit {
 	checked = false;
     indeterminate = false;
+    //select: "Om";
   constructor() { }
-
+  addHero(phone: string, office: string) {
+    
+    
+      
+      
+      this.employees.unshift({select: phone, position: office,image:'assets/profile.jpg'});
+    
+  }
   ngOnInit() {
   }
   employees = [
+   // {select: 'Om', position: 'Full stack developer',image:'assets/profile.jpg'},
 				{select: 'Hari', position: 'Full stack developer',image:'assets/profile.jpg'},
 				{select: 'Sujith', position: 'Full stack developer',image:'assets/man.jpeg'},
 				{select: 'Ramya', position: 'Full stack developer',image:'assets/noavatar.png'},
@@ -21,3 +31,4 @@ export class ContactComponent implements OnInit {
 				{select: 'Fahad', position: 'Full stack developer',image:'assets/profile.jpg'},
 			];
 }
+

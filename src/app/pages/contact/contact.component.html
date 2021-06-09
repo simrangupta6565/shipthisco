@@ -119,12 +119,12 @@
 			<div fxFlex fxLayoutGap="10px" fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="center start">
 				<div fxFlex fxFlex.lt-lg="100">
 					<mat-form-field >
-					<input matInput placeholder="Phone">
+					<input matInput placeholder="Phone" #phone>
 				</mat-form-field>
 				</div>
 				<div fxFlex fxFlex.lt-lg="100">
 					<mat-form-field >
-					<input  matInput placeholder="Office">
+					<input  matInput placeholder="Office" #office>
 				</mat-form-field>
 				</div>
 				
@@ -133,12 +133,12 @@
 			<div fxFlex fxLayoutGap="10px" fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="center start">
 				<div fxFlex.lt-lg="100">
 					<mat-form-field>
-						<input matInput placeholder="Skype">
+						<input matInput placeholder="Skype" #skype>
 					</mat-form-field>
 				</div>
 				<div fxFlex fxFlex.lt-lg="100">
 					<mat-form-field >
-						<input  matInput placeholder="Email">
+						<input  matInput placeholder="Email" #email>
 					</mat-form-field>
 				</div>
 			</div>
@@ -146,7 +146,7 @@
 			<div fxFlex fxLayout="column" fxLayoutAlign="end stretch" >
 				<div fxLayout="row" fxLayoutAlign="space-between stretch" >
 					<button mat-raised-button >CANCEL</button>
-					<button mat-raised-button color="primary">SAVE</button>
+					<button mat-raised-button color="primary"(click)="addHero(phone.value, office.value)" >OffSet</button>
 				</div>
 			</div>
 		</div>

@@ -20,7 +20,8 @@ export class Permission {
 @Injectable()
 export class Permissions {
   canActivate(user: UserToken, id: string): boolean {
-    return false;
+    // return false;
+    return true;
   }
 }
 

@@ -69,32 +69,32 @@ export const highlightJsValue = {
 @NgModule({
   imports: [
     CommonModule,
-    // FlexLayoutModule,
-    // MatAutocompleteModule,
-    // MatButtonModule,
-    // MatCardModule,
-    // MatCheckboxModule,
-    // MatProgressSpinnerModule,
-    // MatIconModule,
-    // MatTabsModule,
-    // MatRadioModule,
-    // MatToolbarModule,
-    // MatListModule,
-    // MatStepperModule,
-    // ReactiveFormsModule,
-    // FormsModule,
-    // MatFormFieldModule,
-    // MatInputModule,
-    // MatMenuModule,
-    // MatExpansionModule,
-    // MatDatepickerModule,
-    // MatNativeDateModule,
-    // MatSliderModule,
-    // MatSelectModule,
-    // MatSlideToggleModule,
-    // MatProgressBarModule,
-    // HighlightModule,
-    // MaterialWidgetsRouterModule
+    FlexLayoutModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatProgressSpinnerModule,
+    MatIconModule,
+    MatTabsModule,
+    MatRadioModule,
+    MatToolbarModule,
+    MatListModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatMenuModule,
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSliderModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatProgressBarModule,
+    HighlightModule,
+    MaterialWidgetsRouterModule
   ],
   declarations: [
     ButtonsComponent,
@@ -125,14 +125,14 @@ export const highlightJsValue = {
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
-      // useValue: highlightJsValue
+      //useValue: highlightJsValue,
       useFactory: highlightJsFactory,
-      deps: []
-      // useValue: {
-      //   coreLibraryLoader: () => import('highlight.js/lib/core'),
-      //   languages: {
-      //     typescript: () => import('highlight.js/lib/languages/typescript')}
-      // }
+      deps: [],
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript')}
+      }
     }
   ],
   exports: [

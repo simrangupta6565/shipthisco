@@ -6,11 +6,13 @@
 		</div>
 		<div class="example-header" style="padding: 0 20px;">
 			<mat-form-field floatPlaceholder="never" style="color: white; width: 100%;">
-				<input matInput #filter placeholder="Filter users">
+				<!-- <input matInput (keyup)="applyFilter($event)" placeholder="Filter users" #input> -->
+				<input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
 			</mat-form-field>
 		</div>
 
-		<mat-table #table [dataSource]="dataSource">
+		<!-- <mat-table #table [dataSource]="dataSource"> -->
+			<mat-table mat-table [dataSource]="dataSource" matSort>
 
 			<!--- Note that these columns can be defined in any order.
 			The actual rendered columns are set as a property on the row definition" -->
@@ -34,9 +36,10 @@
 			</ng-container>
 
 			<!-- Color Column -->
-			<ng-container matColumnDef="color">
+			<ng-container matColumnDef="fruit">
 				<mat-header-cell *matHeaderCellDef> Color </mat-header-cell>
-				<mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </mat-cell>
+				<!-- <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </mat-cell> -->
+				<mat-cell *matCellDef="let row"> {{row.fruit}} </mat-cell>
 			</ng-container>
 
 			<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
