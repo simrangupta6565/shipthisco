@@ -30,9 +30,9 @@ export class ToolbarNotificationComponent implements OnInit {
     	
   	}
 
-  	delete(notification) {
+  	delete(notification , x) {
        
-        this.notifications.splice(notification,1);  
+        this.notifications.splice(notification,x);  
       
   	}
 

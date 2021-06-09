@@ -61,6 +61,8 @@ export class ExampleDatabase {
 
 export class ExampleDataSource extends DataSource<any> {
   _filterChange = new BehaviorSubject('');
+  paginator: any;
+  sort: any;
   get filter(): string { return this._filterChange.value; }
   set filter(filter: string) { this._filterChange.next(filter); }
 

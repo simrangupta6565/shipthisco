@@ -36,16 +36,6 @@ export class FeatureTableComponent implements OnInit {
 	          this.dataSource.filter = this.filter.nativeElement.value;
 	        });
 	}
-	applyFilter(event: Event){
-		const filterValue = (event.target as HTMLInputElement).value;
-		// if (!this.dataSource) { return false; }
-	    // if(this.filter)
-		console.log(filterValue);
-		if(filterValue){
-			this.dataSource.filteredData;
-		}
-
-	}
 
 	isAllSelected(): boolean {
 	    if (!this.dataSource) { return false; }
